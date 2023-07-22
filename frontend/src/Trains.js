@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Trains = () => {
+    const [train, setTrain] = useState([]);
     useEffect(() => {
-        const [train, setTrain] = useState([]);
         const fetchtrains = async () => {
           try {
             const response = await fetch('http://127.0.0.1:8000/api/train');
