@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { useEffect,useState } from 'react';
 const Trains = () => {
     const [train, setTrain] = useState([]);
     useEffect(() => {
