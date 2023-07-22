@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import './train.css'
 import { useEffect,useState } from 'react';
 const Trains = () => {
@@ -37,6 +38,9 @@ const Trains = () => {
           <tbody>
             {train.map((trainItem) => (
               <tr key={trainItem.train_id}>
+                 <td>
+                  <NavLink to={`/${trainItem.train_id}`}>{trainItem.train_id}</NavLink>
+                </td>
                 <td>{trainItem.train_id}</td>
                 <td>{trainItem.train_name}</td>
                 <td>{trainItem.seats_available}</td>
